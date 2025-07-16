@@ -1,0 +1,54 @@
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px; /* Adds rounded corners to the whole carousel */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide {
+    display: none;
+    position: relative;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-dot {
+    width: 3px;
+    height: 3px;
+    margin: 0 6px;
+    border-radius: 10%;
+    border: none;
+    background: gray;
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background: black;
+}
