@@ -1,42 +1,31 @@
 export default async function decorate(block) {
-  const rows = [...block.querySelectorAll('tr')];
-  if (rows.length === 0) return;
-
-  const headers = [...rows[0].children].map((th) => th.textContent.trim().toLowerCase());
-  const data = rows.slice(1).map((row) => {
-    const cells = [...row.children];
-    const obj = {};
-    headers.forEach((key, idx) => {
-      obj[key] = cells[idx]?.textContent.trim();
-    });
-    return obj;
-  });
+  const response = await fetch('/subscribe-form-config.json');
+  const json = await response.json();
 
   const form = document.createElement('form');
-  form.action = '/thankyou.plain.html';
-  form.method = 'GET';
+  form.className = 'subscribe-form';
 
-  data.forEach((field) => {
-    if (field.type === 'submit') {
-      const btn = document.createElement('button');
-      btn.type = 'submit';
-      btn.textContent = field.label || 'Submit';
-      form.appendChild(btn);
-    } else {
+  json.data.forEach((field) => {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'form-field';
+
+    if (field.Type !== 'submit') {
       const label = document.createElement('label');
-      label.textContent = field.label;
-
-      const input = document.createElement('input');
-      input.type = field.type || 'text';
-      input.name = field.name;
-      input.placeholder = field.placeholder || '';
-      if (field.required === 'true') input.required = true;
-
-      form.appendChild(label);
-      form.appendChild(input);
+      label.textContent = field.Label;
+      label.setAttribute('for', field.Name);
+      wrapper.appendChild(label);
     }
+
+    const input = document.createElement('input');
+    input.type = field.Type;
+    input.name = field.Name;
+    input.placeholder = field.Placeholder || '';
+    if (field.Required === 'true') input.required = true;
+
+    wrapper.appendChild(input);
+    form.appendChild(wrapper);
   });
 
-  block.innerHTML = '';
+  block.innerHTML = ''; // clear the block content (like "# Subscribe")
   block.appendChild(form);
 }
