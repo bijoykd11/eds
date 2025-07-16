@@ -15,7 +15,6 @@ export default async function decorate(block) {
   const form = document.createElement('form');
   form.action = '/thankyou.plain.html';
   form.method = 'GET';
-  form.className = 'eds-subscribe-form';
 
   data.forEach((field) => {
     if (field.type === 'submit') {
