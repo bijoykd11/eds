@@ -19,4 +19,3 @@ export default function decorate(block) {
     block.appendChild(link);
   }
 }
-ç
