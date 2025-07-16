@@ -1,4 +1,5 @@
 mountpoints:
-  /: https://drive.google.com/drive/u/0/folders/15RnuRGsGcOP8HIITNu-qSBiH_Rwv0c1C
+  /:
+    url: https://drive.google.com/drive/u/0/folders/15RnuRGsGcOP8HIITNu-qSBiH_Rwv0c1C
   /subscribe:
-    url: https://docs.google.com/spreadsheets/d/1ox1TgP3Kc12BZw-PxJymEcQwmJ2SirSyAu9lHTasgJE/edit
+    url: https://docs.google.com/spreadsheets/d/1ox1TgP3Kc12BZw-PxJymEcQwmJ2SirSyAu9lHTasgJE
