@@ -1,0 +1,62 @@
+/* Slider container */
+.testimonials-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.testimonials-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual testimonial card */
+.testimonials-card {
+  flex: 0 0 auto;
+  width: 300px;
+  background-color:rgb(193, 225, 205);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  scroll-snap-align: start;
+}
+
+/* Author image */
+.testimonials-card .author-photo {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Quote */
+.testimonials-card .quote {
+  font-style: italic;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Author */
+.testimonials-card .author {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.testimonials-container {
+  background-color: #e6f4ea; /* Very light green */
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 64, 0, 0.05); /* soft green shadow */
+  max-width: 100%;
+  margin: 0 auto;
+}
