@@ -1,0 +1,44 @@
+.highlight-card {
+  background: #f0fdf4;
+  border-left: 5px solid #34d399;
+  margin: 10px 0;
+  padding: 16px 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  transition: all 0.6s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.highlight-carousel {
+  position: relative;
+  min-height: 120px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.highlight-carousel.hidden {
+  opacity: 0;
+}
+
+.highlight-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f0fdf4;
+  border-left: 5px solid #34d399;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+
+  /* Centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+

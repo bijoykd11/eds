@@ -1,0 +1,13 @@
+.cta.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem; /* space between buttons */
+  flex-wrap: wrap;
+  justify-content: center; /* center the buttons horizontally */
+  text-align: center;
+}
