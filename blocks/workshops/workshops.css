@@ -1,0 +1,70 @@
+/* Slider container */
+.workshops-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.workshops-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual testimonial card */
+.workshops-card {
+  flex: 0 0 auto;
+  width: 300px;
+  background-color:rgb(193, 225, 205);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  scroll-snap-align: start;
+}
+
+/* Author image */
+.workshops-card .topic-photo {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Quote */
+.workshops-card .speaker {
+  font-style: italic;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Author */
+.workshops-card .topic {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Date */
+.workshops-card .date {
+  font-weight: bold;
+  font-size: 0.95rem;
+  padding: 2px;
+  color: #444;
+}
+
+.workshops-container {
+  background-color: #e6f4ea; /* Very light green */
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 64, 0, 0.05); /* soft green shadow */
+  max-width: 100%;
+  margin: 0 auto;
+}

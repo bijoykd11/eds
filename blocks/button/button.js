@@ -18,6 +18,5 @@ export default function decorate(block) {
     block.innerHTML = '';
     block.appendChild(link);
   }
-// Final resolved code without conflict markers
-
+}
 

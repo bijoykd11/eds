@@ -1,3 +1,16 @@
+.button block{
+  align-items: center;
+  text-align: center;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;
+}
+
 .button.primary {
   display: inline-block;
   padding: 12px 24px;
@@ -6,6 +19,7 @@
   border-radius: 4px;
   text-decoration: none;
   font-weight: 600;
+  text-align: center;
   transition: background-color 0.3s;
 }
 
